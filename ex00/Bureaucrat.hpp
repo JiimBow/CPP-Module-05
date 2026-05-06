@@ -6,7 +6,7 @@
 /*   By: jodone <jodone@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 10:29:01 by jodone            #+#    #+#             */
-/*   Updated: 2026/05/05 13:48:48 by jodone           ###   ########.fr       */
+/*   Updated: 2026/05/06 10:03:59 by jodone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,14 @@ public:
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		const char* what() const throw()
-		{
-            return "Grade too high";
-		}
+		const char* what() const throw();
+		
 	};
 	
-	class GradeTooLowExcetion : public std::exception
+	class GradeTooLowException : public std::exception
 	{
 	public:
-		const char* waht() const throw()
-		{
-			return "Grade too low";
-		}
+		const char* what() const throw();
 	};
 	
 	
