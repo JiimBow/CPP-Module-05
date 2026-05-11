@@ -6,7 +6,7 @@
 /*   By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 10:29:01 by jodone            #+#    #+#             */
-/*   Updated: 2026/05/11 16:48:10 by jimbow           ###   ########.fr       */
+/*   Updated: 2026/05/11 18:08:14 by jimbow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <string>
 #include <iostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -44,6 +46,8 @@ public:
 	int					getGrade(void) const;
 	void				UpGrade(void);
 	void				DownGrade(void);
+
+	void signForm(Form& form) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj);

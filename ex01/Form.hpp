@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 10:29:01 by jodone            #+#    #+#             */
-/*   Updated: 2026/05/11 16:48:10 by jimbow           ###   ########.fr       */
+/*   Created: 2026/05/11 16:21:13 by jimbow            #+#    #+#             */
+/*   Updated: 2026/05/11 18:04:01 by jimbow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+# define FORM_HPP
 
+#include "Bureaucrat.hpp"
 #include <string>
 #include <iostream>
 
-class Bureaucrat
+class Form
 {
 private:
-	const std::string name;
-	int	grade;
+	const std::string	name;
+	bool	isSigned;
+	const int signGrade;
+	const int exeGrade;
 public:
 	class GradeTooHighException : public std::exception
 	{
@@ -33,19 +36,21 @@ public:
 	public:
 		const char* what() const throw();
 	};
-	
-	Bureaucrat();
-	Bureaucrat(std::string const & name, int grade);
-	Bureaucrat(const Bureaucrat& copy);
-	Bureaucrat& operator=(const Bureaucrat& copy);
-	~Bureaucrat();
 
-	const std::string	getName(void) const;
-	int					getGrade(void) const;
-	void				UpGrade(void);
-	void				DownGrade(void);
+	Form();
+	Form(const std::string name, int signGrade, int exeGrade);
+	Form(const Form& copy);
+	Form& operator=(const Form& copy);
+	~Form();
+
+	const std::string getName() const;
+	bool getIsSigned() const;
+	int getSignGrade() const;
+	int getExecGrade() const;
+
+	void	beSigned(Bureaucrat const & bureaucrat);
 };
 
-std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj);
+std::ostream& operator<<(std::ostream& os, const Form& obj);
 
 #endif

@@ -6,25 +6,27 @@
 /*   By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 10:28:51 by jodone            #+#    #+#             */
-/*   Updated: 2026/05/11 18:29:00 by jimbow           ###   ########.fr       */
+/*   Updated: 2026/05/11 18:29:38 by jimbow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <iostream>
 
 int	main()
 {
 	try
 	{
-		Bureaucrat Yosh("Yosh", 2);
+		Bureaucrat Yosh("Yosh", 42);
+		Form Taxes("Taxes", 50, 25);
 	
 		std::cout << Yosh << std::endl;
+		std::cout << Taxes << std::endl;
 
-		Yosh.UpGrade();
-		std::cout << Yosh << std::endl;
-		Yosh.UpGrade();
-		std::cout << Yosh << std::endl;
+		Yosh.signForm(Taxes);
+
+		std::cout << Taxes << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -35,11 +37,15 @@ int	main()
 	
 	try
 	{
-		Bureaucrat Mark("Mark", 149);
-		Mark.DownGrade();
-		std::cout << Mark << std::endl;
-		Mark.DownGrade();
-		std::cout << Mark << std::endl;
+		Bureaucrat Bob("Bob", 65);
+		Form MariageContract("MariageContract", 50, 25);
+	
+		std::cout << Bob << std::endl;
+		std::cout << MariageContract << std::endl;
+
+		Bob.signForm(MariageContract);
+
+		std::cout << MariageContract << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -50,7 +56,7 @@ int	main()
 	
 	try
 	{
-		Bureaucrat Jim("Jim", 0);
+		Form BadForm("BadForm", 0, 25);
 	}
 	catch(const std::exception& e)
 	{
@@ -61,7 +67,7 @@ int	main()
 	
 	try
 	{
-		Bureaucrat Bob("Bob", 151);
+		Form AnotherBad("AnotherBad", 151, 25);
 	}
 	catch(const std::exception& e)
 	{
