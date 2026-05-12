@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jodone <jodone@student.42angouleme.fr>     +#+  +:+       +#+        */
+/*   By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 16:21:13 by jimbow            #+#    #+#             */
-/*   Updated: 2026/05/12 11:11:22 by jodone           ###   ########.fr       */
+/*   Updated: 2026/05/12 16:40:11 by jimbow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ public:
 	};
 	
 	class GradeTooLowException : public std::exception
+	{
+	public:
+		const char* what() const throw();
+	};
+
+	class FormNotSignedException : public std::exception
 	{
 	public:
 		const char* what() const throw();

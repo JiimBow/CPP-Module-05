@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jodone <jodone@student.42angouleme.fr>     +#+  +:+       +#+         #
+#    By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 10:36:14 by jodone            #+#    #+#              #
-#    Updated: 2026/05/12 11:04:06 by jodone           ###   ########.fr        #
+#    Updated: 2026/05/12 17:08:47 by jimbow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ HEADER		= -I.
 
 SRC			= main.cpp \
 				Bureaucrat.cpp \
-				AForm.cpp
+				AForm.cpp \
+				ShrubberyCreationForm.cpp
 
 OBJ			= $(SRC:%.cpp=$(OBJ_DIR)%.o)
 
