@@ -6,11 +6,12 @@
 /*   By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 11:26:05 by jodone            #+#    #+#             */
-/*   Updated: 2026/05/12 17:11:37 by jimbow           ###   ########.fr       */
+/*   Updated: 2026/05/12 17:41:56 by jimbow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include <iostream>
 #include <fstream>
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm()

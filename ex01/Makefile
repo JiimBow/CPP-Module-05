@@ -6,7 +6,7 @@
 #    By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 10:36:14 by jodone            #+#    #+#              #
-#    Updated: 2026/05/11 18:29:51 by jimbow           ###   ########.fr        #
+#    Updated: 2026/05/12 17:22:46 by jimbow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RESET   := \033[0m
 # DIR
 OBJ_DIR		= objects/
 
-# MOMMY
+# FORM UP, MAGGOTS !
 NAME		= a.out
 
 HEADER		= -I.

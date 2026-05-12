@@ -6,7 +6,7 @@
 #    By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 10:36:14 by jodone            #+#    #+#              #
-#    Updated: 2026/05/12 17:08:47 by jimbow           ###   ########.fr        #
+#    Updated: 2026/05/12 17:23:12 by jimbow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RESET   := \033[0m
 # DIR
 OBJ_DIR		= objects/
 
-# MOMMY
+# NO, YOU NEED FORM 28B, not 28C...
 NAME		= a.out
 
 HEADER		= -I.
@@ -28,7 +28,8 @@ HEADER		= -I.
 SRC			= main.cpp \
 				Bureaucrat.cpp \
 				AForm.cpp \
-				ShrubberyCreationForm.cpp
+				ShrubberyCreationForm.cpp \
+				RobotomyRequestForm.cpp
 
 OBJ			= $(SRC:%.cpp=$(OBJ_DIR)%.o)
 
