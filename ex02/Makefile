@@ -6,7 +6,7 @@
 #    By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 10:36:14 by jodone            #+#    #+#              #
-#    Updated: 2026/05/12 17:23:12 by jimbow           ###   ########.fr        #
+#    Updated: 2026/05/12 17:53:45 by jimbow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ SRC			= main.cpp \
 				Bureaucrat.cpp \
 				AForm.cpp \
 				ShrubberyCreationForm.cpp \
-				RobotomyRequestForm.cpp
+				RobotomyRequestForm.cpp \
+				PresidentialPardonForm.cpp
 
 OBJ			= $(SRC:%.cpp=$(OBJ_DIR)%.o)
 

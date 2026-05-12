@@ -6,7 +6,7 @@
 /*   By: jimbow <jimbow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 10:29:01 by jodone            #+#    #+#             */
-/*   Updated: 2026/05/12 17:07:54 by jimbow           ###   ########.fr       */
+/*   Updated: 2026/05/12 18:06:50 by jimbow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ public:
 	void				DownGrade(void);
 
 	void signForm(AForm& form) const;
+	void executeForm(AForm const & form) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj);
